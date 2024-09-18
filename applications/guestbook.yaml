@@ -12,3 +12,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: guestbook
+  syncPolicy:
+    syncOptions:     # Sync options which modifies sync behavior
+    - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
